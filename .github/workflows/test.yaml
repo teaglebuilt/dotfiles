@@ -1,0 +1,12 @@
+name: GitHub Actions CI
+on: [push]
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macOS-latest]
+    steps:
+    - name: Set up Git repository
+      uses: actions/checkout@master
