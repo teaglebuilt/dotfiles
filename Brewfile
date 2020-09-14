@@ -11,6 +11,7 @@ tap 'aws/tap'
 
 
 # Languages
+brew "rbenv"
 brew "python@3.8"
 brew "node"
 brew "go"
@@ -18,6 +19,7 @@ brew "go"
 # CLI
 brew "awscli"
 brew 'aws-sam-cli'
+brew "azure-cli"
 brew 'git'
 brew "yarn"
 brew "gnupg"
