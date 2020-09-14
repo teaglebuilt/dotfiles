@@ -7,6 +7,8 @@ tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "homebrew/cask-drivers"
 tap "homebrew/services"
+tap "hashicorp/terraform"
+tap "homebrew/cask-fonts"
 tap 'aws/tap'
 
 
@@ -16,13 +18,16 @@ brew "python@3.8"
 brew "node"
 brew "go"
 
-# CLI
+# Tools
 brew "awscli"
 brew 'aws-sam-cli'
 brew "azure-cli"
 brew 'git'
 brew "yarn"
 brew "gnupg"
+brew "terraform"
+brew "make"
+brew "pre-commit"
 
 # Shell
 brew "starship"
@@ -41,7 +46,7 @@ cask 'slack'
 
 
 # Fonts
-tap "homebrew/cask-fonts"
 cask "font-hack-nerd-font"
 cask "font-inconsolata-for-powerline"
 cask "font-menlo-for-powerline"
+
