@@ -10,10 +10,21 @@ export PATH=$PATH:$GOROOT/bin
 export ZSH_DISABLE_COMPFIX=true
 export ZSH="$HOME/.oh-my-zsh"
 export STARSHIP_CONFIG=starship
+export HOMEBREW_PREFIX=/usr/local
 
-# source antigen.zsh
-# antigen bundle zsh-users/zsh-syntax-highlighting
-# antigen apply
+plugins=(
+    aws
+    brew
+    git
+    bundler
+    vagrant
+    terraform
+    osx
+    rbenv
+    helm
+    oc
+    python
+)
 
 
 function code {
@@ -33,5 +44,10 @@ eval "$(rbenv init -)"
 eval "$(starship init zsh)"
 
 source $(dirname $(gem which colorls))/tab_complete.sh
+source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 
 alias python="python3"
+alias gs="git status"
+alias gpm="git push origin master"
+alias cls="colorls"
