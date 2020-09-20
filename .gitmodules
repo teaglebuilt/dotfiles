@@ -1,0 +1,6 @@
+[submodule "vim/.vim/bundle/Vundle"]
+	path = vim/.vim/bundle/Vundle
+	url = https://github.com/VundleVim/Vundle.vim
+[submodule "vim/.vim/bundle/vim-devicons"]
+	path = vim/.vim/bundle/vim-devicons
+	url = https://github.com/ryanoasis/vim-devicons

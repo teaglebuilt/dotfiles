@@ -28,6 +28,7 @@ brew "gnupg"
 brew "terraform"
 brew "make"
 brew "pre-commit"
+brew "jq"
 
 # Shell
 brew "starship"

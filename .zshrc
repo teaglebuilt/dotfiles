@@ -16,13 +16,9 @@ plugins=(
     aws
     brew
     git
-    bundler
-    vagrant
-    terraform
     osx
     rbenv
     helm
-    oc
     python
 )
 
@@ -43,7 +39,7 @@ source $ZSH/oh-my-zsh.sh
 eval "$(rbenv init -)"
 eval "$(starship init zsh)"
 
-source $(dirname $(gem which colorls))/tab_complete.sh
+# source $(dirname $(gem which colorls))/tab_complete.sh
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
@@ -51,3 +47,5 @@ alias python="python3"
 alias gs="git status"
 alias gpm="git push origin master"
 alias cls="colorls"
+alias nuke="rm -rf"
+
