@@ -1,0 +1,17 @@
+
+
+vpnconnect() {
+    ./opt/cisco/anyconnect/bin/vpn connect $1
+}
+
+vpndisconnect() {
+    ./opt/cisco/anyconnect/bin/vpn disconnect
+}
+
+vpncheck() {
+    ./opt/cisco/anyconnect/bin/vpn state
+}
+
+vpnconnect
+vpndisconnect
+vpncheck

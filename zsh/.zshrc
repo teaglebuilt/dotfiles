@@ -46,6 +46,12 @@ source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 alias python="python3"
 alias gs="git status"
 alias gpm="git push origin master"
-alias cls="colorls"
+alias ls="colorls"
 alias nuke="rm -rf"
+alias envsource="source env/bin/activate"
+alias load="source .zshrc"
 
+
+### LOAD FUNCTIONS ###
+# fpath=(~/functions $fpath)
+# autoload ocall
