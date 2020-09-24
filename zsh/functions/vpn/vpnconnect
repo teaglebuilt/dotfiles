@@ -1,0 +1,7 @@
+
+
+vpnconnect() {
+    /opt/cisco/anyconnect/bin/vpn connect $1
+}
+
+

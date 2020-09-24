@@ -3,5 +3,3 @@
 ocall() {
     oc get all | grep $1
 }
-
-oc_all

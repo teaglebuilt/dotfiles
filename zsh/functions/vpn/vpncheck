@@ -1,0 +1,5 @@
+
+
+vpncheck() {
+    /opt/cisco/anyconnect/bin/vpn state
+}

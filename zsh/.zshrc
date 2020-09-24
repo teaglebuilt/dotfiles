@@ -49,9 +49,7 @@ alias gpm="git push origin master"
 alias ls="colorls"
 alias nuke="rm -rf"
 alias envsource="source env/bin/activate"
-alias load="source .zshrc"
+alias load="source ~/dotfiles/zsh/.zshrc"
 
-
-### LOAD FUNCTIONS ###
-# fpath=(~/functions $fpath)
-# autoload ocall
+fpath=( ~/dotfiles/zsh/functions "${fpath[@]}" )
+autoload -Uz $fpath[1]/*/*(.:t)
