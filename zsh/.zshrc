@@ -51,5 +51,7 @@ alias nuke="rm -rf"
 alias envsource="source env/bin/activate"
 alias load="source ~/dotfiles/zsh/.zshrc"
 
-fpath=( ~/dotfiles/zsh/functions "${fpath[@]}" )
-autoload -Uz $fpath[1]/*/*(.:t)
+
+for function in ./zsh/functions/*/*; do
+  source $function
+done
