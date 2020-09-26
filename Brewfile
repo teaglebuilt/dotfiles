@@ -29,6 +29,7 @@ brew "terraform"
 brew "make"
 brew "pre-commit"
 brew "jq"
+brew "k9s"
 
 # Shell
 brew "starship"

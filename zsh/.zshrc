@@ -1,5 +1,3 @@
-
-
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export GOROOT=/usr/local/opt/go/libexec
 export GOPATH=$HOME/go-workspace
@@ -11,6 +9,7 @@ export ZSH_DISABLE_COMPFIX=true
 export ZSH="$HOME/.oh-my-zsh"
 export STARSHIP_CONFIG=starship
 export HOMEBREW_PREFIX=/usr/local
+# export STARSHIP_CONFIG=~/.config/starship.toml
 
 plugins=(
     aws
@@ -49,9 +48,9 @@ alias gpm="git push origin master"
 alias ls="colorls"
 alias nuke="rm -rf"
 alias envsource="source env/bin/activate"
-alias load="source ~/dotfiles/zsh/.zshrc"
+alias load="source ~/.zshrc"
 
 
-for function in ./zsh/functions/*/*; do
+for function in ~/functions/*/*; do
   source $function
 done

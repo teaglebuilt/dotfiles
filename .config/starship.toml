@@ -1,0 +1,15 @@
+[character]      # The name of the module we are configuring is "character"
+symbol = "🚀"     # The "symbol" segment is being set to "➜"
+
+
+[golang]
+symbol = " "
+
+[docker]
+symbol = " "
+
+[java]
+symbol = " "
+
+[python]
+symbol = " "
