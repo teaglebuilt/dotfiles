@@ -1,0 +1,45 @@
+[color]
+	ui = true
+
+[user]
+	name = Dillan Teagle
+	email = dillan.teagle.va@gmail.com
+
+[includeIf "gitdir:~/.gitconfig-work"]
+  path = .gitconfig-work
+
+[includeIf "gitdir:~/code/work/"]
+  path = .gitconfig-work
+
+
+[github]
+	user = jasonamyers
+
+
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all
+    pu = !"git fetch origin -v; git fetch upstream -v; git merge upstream/master"
+    s = "status -su"
+    st = status
+    ci = commit --verbose
+    co = checkout
+    di = diff
+    dc = diff --cached
+        amend = commit --amend
+    aa = add --all
+    ff = merge --ff-only
+    pullff = pull --ff-only
+    noff = merge --no-ff
+    fa = fetch --all
+    pom = push origin master
+    b = branch
+    ds = diff --stat=160,120
+    dh1 = diff HEAD~1
+
+[color "diff"]
+	meta = yellow
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
