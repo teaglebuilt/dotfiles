@@ -7,19 +7,11 @@ export PATH=$PATH:$GOROOT/bin
 
 export ZSH_DISABLE_COMPFIX=true
 export ZSH="$HOME/.oh-my-zsh"
-export STARSHIP_CONFIG=starship
+export ZSH_CUSTOM=~/dotfiles/zsh/.oh-my-zsh
 export HOMEBREW_PREFIX=/usr/local
-# export STARSHIP_CONFIG=~/.config/starship.toml
 
-plugins=(
-    aws
-    brew
-    git
-    osx
-    rbenv
-    helm
-    python
-)
+
+ZSH_THEME="spaceship"
 
 
 function code {
@@ -36,7 +28,7 @@ function code {
 source $ZSH/oh-my-zsh.sh
 
 eval "$(rbenv init -)"
-eval "$(starship init zsh)"
+
 
 # source $(dirname $(gem which colorls))/tab_complete.sh
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -49,6 +41,14 @@ alias ls="colorls"
 alias nuke="rm -rf"
 alias envsource="source env/bin/activate"
 alias load="source ~/.zshrc"
+
+export SPACESHIP_CHAR_SYMBOL="\uf0e7"
+export SPACESHIP_CHAR_SUFFIX="  "
+export SPACESHIP_PYENV_SYMBOL=" "
+export SPACESHIP_VENV_SYMBOL=" "
+# export SPACESHIP_DOCKER_SYMBOL=" "
+export SPACESHIP_GOLANG_PREFIX=" "
+export SPACESHIP_GOLANG_SYMBOL="\ue724 "
 
 
 for function in ~/functions/*/*; do
