@@ -18,6 +18,8 @@ brew "python@3.8"
 brew "node"
 brew "go"
 
+# DB
+brew "redis"
 # Tools
 brew "awscli"
 brew 'aws-sam-cli'
