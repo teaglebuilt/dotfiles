@@ -7,6 +7,10 @@ ROOT="$(pwd)"
 
 set -e
 
+cd $HOME
+
+echo "installing dotfiles at $HOME"
+git clone https://github.com/teaglebuilt/dotfiles
 
 if [[ $(uname -s) == "Darwin" ]]; then
      exec $ROOT/scripts/install-osx.sh

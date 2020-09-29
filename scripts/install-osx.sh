@@ -2,5 +2,5 @@
 
 echo Installing OSX
 
-cd $HOME
+cd $HOME/dotfiles
 echo $(pwd)
