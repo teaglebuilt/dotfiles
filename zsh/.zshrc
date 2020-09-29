@@ -43,12 +43,18 @@ alias envsource="source env/bin/activate"
 alias load="source ~/.zshrc"
 
 export SPACESHIP_CHAR_SYMBOL="\uf0e7"
-export SPACESHIP_CHAR_SUFFIX="  "
-# export SPACESHIP_PYENV_SYMBOL=" "
-# export SPACESHIP_VENV_SYMBOL=" "
-# export SPACESHIP_DOCKER_SYMBOL=" "
+export SPACESHIP_CHAR_SUFFIX=" "
+export SPACESHIP_PYENV_SYMBOL=" "
+export SPACESHIP_VENV_SYMBOL=" "
+export SPACESHIP_PYENV_COLOR="blue"
+export SPACESHIP_VENV_COLOR="yellow"
+export SPACESHIP_DOCKER_SYMBOL=" "
 export SPACESHIP_GOLANG_PREFIX=" "
 export SPACESHIP_GOLANG_SYMBOL="\ue724 "
+export SPACESHIP_NODE_SYMBOL="\uf898 "
+export SPACESHIP_RUBY_SYMBOL="\ue791 "
+export SPACESHIP_AWS_SYMBOL="\ue7ad "
+export SPACESHIP_KUBECTL_SYMBOL="\ue7b7 "
 
 
 for function in ~/functions/*/*; do
