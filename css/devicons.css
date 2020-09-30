@@ -7,11 +7,13 @@
   src: url("~/Library/Fonts/devicons.eot?#iefixxqxft6") format("embedded-opentype"), url("~/Library/Fonts/devicons.woff?xqxft6") format("woff"), url("~/Library/Fonts/devicons.ttf?xqxft6") format("truetype"), url("~/Library/Fonts/devicons.svg?xqxft6#devicons") format("svg");
   font-weight: normal;
   font-style: normal;
+  font-size: large;
 }
 
 .devicons {
   font-family: 'devicons';
   speak: none;
+  font-size: large;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
