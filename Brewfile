@@ -20,6 +20,8 @@ brew "go"
 
 # DB
 brew "redis"
+
+
 # Tools
 brew "awscli"
 brew 'aws-sam-cli'
@@ -32,14 +34,15 @@ brew "make"
 brew "pre-commit"
 brew "jq"
 brew "k9s"
+brew "act"
 
 # Shell
-brew "starship"
 brew 'zsh-syntax-highlighting'
 brew "zsh-autosuggestions"
 brew "diff-so-fancy"
-brew 'tree'
+brew "tree"
 brew "vim"
+
 
 # Casks
 cask "visual-studio-code"

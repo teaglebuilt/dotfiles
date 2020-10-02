@@ -1,13 +1,14 @@
-name: GitHub Actions CI
-on: [push]
+name: Tests
+on:
+  push:
+  pull_request:
 
 jobs:
-  test:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [macOS-latest]
+
+  tests:
+    name: Run full installation
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - name: Execute Setup Script
-      run: ./setup.sh
+      - uses: actions/checkout@master
+      - name: Run install
+        run : ./setup.sh
