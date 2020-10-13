@@ -1,6 +1,7 @@
 set encoding=utf8
-set guifont=FiraCode-Medium:h11
+set guifont=Fira\ Code\ Regular\ Nerd\ Font\ Complete:h11
 
 syntax enable
 
-au BufRead,BufNewFile *.py set filetype=python
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
