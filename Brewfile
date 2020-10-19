@@ -35,6 +35,7 @@ brew "pre-commit"
 brew "jq"
 brew "k9s"
 brew "act"
+brew "httpie"
 
 # Shell
 brew 'zsh-syntax-highlighting'

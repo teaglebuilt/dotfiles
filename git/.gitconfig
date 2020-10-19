@@ -8,12 +8,8 @@
 [includeIf "gitdir:~/.gitconfig-work"]
   path = .gitconfig-work
 
-[includeIf "gitdir:~/code/work/"]
-  path = .gitconfig-work
-
-
 [github]
-	user = jasonamyers
+	user = teaglebuilt
 
 
 [alias]
@@ -43,3 +39,5 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+[credential]
+	helper = osxkeychain

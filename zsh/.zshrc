@@ -37,6 +37,7 @@ source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 alias python="python3"
 alias gs="git status"
 alias gpm="git push origin master"
+alias gll='git log --graph --pretty=oneline --abbrev-commit'
 alias ls="colorls"
 alias nuke="rm -rf"
 alias envsource="source env/bin/activate"

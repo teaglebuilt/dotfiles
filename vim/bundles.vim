@@ -11,6 +11,7 @@ Plugin 'alfredodeza/coveragepy.vim.git'
 Plugin 'tpope/vim-markdown.git'
 Plugin 'hashivim/vim-hashicorp-tools'
 Plugin 'nanotech/jellybeans.vim.git'
+Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 call vundle#end()    
 filetype plugin indent on  

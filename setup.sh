@@ -1,14 +1,10 @@
 #!/usr/bin/env bash
 
 ROOT="$(pwd)"
-# rbenv install 2.5.0
-# rbenv global 2.5.0
-# rbenv rehash
 
 set -e
 
 cd $HOME
-
 
 if [[ $(uname -s) == "Darwin" ]]; then
      exec $ROOT/scripts/install-osx.sh
