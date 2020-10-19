@@ -1,6 +1,6 @@
 # Dotfiles
 
-[Dotfiles Build](https://img.shields.io/github/workflow/status/teaglebuilt/dotfiles/Tests?style=flat-square)
+<img src="https://img.shields.io/github/workflow/status/teaglebuilt/dotfiles/Tests?style=flat-square" alt="github actions build" />
 
 
 My development workspace with automated provisioning for linux and osx. Setup scripts are currently in development
