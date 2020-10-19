@@ -15,4 +15,10 @@ echo "Installing HomeBrew"
 
 set -e
 
+echo "installing dotfiles at $HOME"
+git clone https://github.com/teaglebuilt/dotfiles
+
+cd dotfiles
+
+echo "installing homebrew packages"
 brew bundle
