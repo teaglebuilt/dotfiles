@@ -21,6 +21,9 @@ brew "go"
 # DB
 brew "redis"
 
+# Builds
+brew 'gradle'
+
 
 # Tools
 brew "awscli"
@@ -34,7 +37,7 @@ brew "make"
 brew "pre-commit"
 brew "jq"
 brew "k9s"
-brew "act"
+brew "derailed/popeye"
 brew "httpie"
 
 # Shell
