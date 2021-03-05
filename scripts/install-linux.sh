@@ -19,7 +19,8 @@ info "Symlink dotfiles to home dir at $HOME"
 
 ln -s $HOME/dotfiles/.vimrc .vimrc
 ln -s $HOME/dotfiles/vim .vim
-ln -s $HOME/dotfiles/.zshrc .zshrc
+ln -s $HOME/dotfiles/zsh/.zshrc .zshrc
+ln -s $HOME/dotfiles/zsh/.aliases .aliases
 ln -s $HOME/dotfiles/.oh-my-zsh .oh-my-zsh
 ln -s $HOME/dotfiles/functions functions
 ln -s $HOME/dotfiles/git/.gitconfig .gitconfig

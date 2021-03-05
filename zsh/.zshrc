@@ -1,8 +1,7 @@
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export GOROOT=/usr/local/opt/go/libexec
-export GOPATH=$HOME/go-workspace
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
+export PATH=$HOME/bin:/usr/local/bin:$PATH:/usr/local/Cellar/go/1.15.5/bin
+export GOPATH=$HOME/workspace
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home
+export PATH=$PATH:/usr/local/Cellar/gradle/6.7.1/bin:$PATH:$PATH:$JAVA_HOME/bin
 
 
 export ZSH_DISABLE_COMPFIX=true
@@ -33,15 +32,8 @@ eval "$(rbenv init -)"
 # source $(dirname $(gem which colorls))/tab_complete.sh
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-
-alias python="python3"
-alias gs="git status"
-alias gpm="git push origin master"
-alias gll='git log --graph --pretty=oneline --abbrev-commit'
-alias ls="colorls"
-alias nuke="rm -rf"
-alias envsource="source env/bin/activate"
-alias load="source ~/.zshrc"
+# Load aliases if they exist.
+[ -f "${HOME}/.aliases" ] && source "${HOME}/.aliases"
 
 export SPACESHIP_CHAR_SYMBOL="\uf0e7"
 export SPACESHIP_CHAR_SUFFIX=" "

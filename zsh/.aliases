@@ -1,0 +1,16 @@
+
+alias setnpm="npm config set registry https://registry.npmjs.org/"
+alias setoptum="npm config set registry https://repo1.uhc.com/artifactory/api/npm/npm-virtual/"
+alias gs="git status"
+alias gpm="git push origin master"
+alias gll='git log --graph --pretty=oneline --abbrev-commit'
+alias ls="colorls"
+alias nuke="rm -rf"
+alias envsource="source env/bin/activate"
+alias load="source ~/.zshrc"
+alias python="python3"
+alias k8nonprod='kubectl config use-context prepayde-nonprod/osfi-k8s-elr-core-04-nonprod'
+alias k8prod='kubectl config use-context prepayde-prod/osfi-k8s-elr-core-01'
+alias k8test='kubectl config use-context prepayde-test/osfi-k8s-elr-core-04-nonprod'
+alias k8dev='kubectl config use-context prepayde-dev/osfi-k8s-elr-core-04-nonprod'
+alias run=./run.sh
