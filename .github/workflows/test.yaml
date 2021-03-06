@@ -4,15 +4,6 @@ on:
   pull_request:
 
 jobs:
-
-  linux:
-    name: Run full installation
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - name: Run install
-        run : ./setup.sh
-
   osx:
     name: Run full installation
     runs-on: macos-latest
@@ -20,3 +11,11 @@ jobs:
       - uses: actions/checkout@master
       - name: Run install
         run : ./setup.sh
+
+  # linux:
+  #   name: Run full installation
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@master
+  #     - name: Run install
+  #       run : ./setup.sh

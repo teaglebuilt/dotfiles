@@ -1,14 +1,11 @@
 
 # Taps
-tap 'caskroom/homebrew-cask'
 tap "homebrew/bundle"
 tap "homebrew/cask"
-tap "homebrew/cask-fonts"
 tap "homebrew/core"
+tap "homebrew/cask-fonts"
 tap "homebrew/cask-drivers"
 tap "homebrew/services"
-tap "hashicorp/terraform"
-tap "homebrew/cask-fonts"
 tap 'aws/tap'
 
 
@@ -27,17 +24,15 @@ brew 'gradle'
 
 # Tools
 brew "awscli"
-brew 'aws-sam-cli'
 brew "azure-cli"
 brew 'git'
 brew "yarn"
 brew "gnupg"
-brew "terraform"
 brew "make"
 brew "pre-commit"
 brew "jq"
 brew "k9s"
-brew "derailed/popeye"
+brew "derailed/popeye/popeye"
 brew "httpie"
 
 # Shell
