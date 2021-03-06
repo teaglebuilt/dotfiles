@@ -3,6 +3,12 @@
 # rbenv global 2.5.0
 # rbenv rehash
 
+
+brewIn() {
+  if brew ls --versions "$1"; then brew upgrade "$1";
+  else brew install "$1";
+}
+
 source ./logging.sh
 
 info "Installing OSX"
@@ -21,4 +27,4 @@ git clone https://github.com/teaglebuilt/dotfiles
 cd dotfiles
 
 echo "installing homebrew packages"
-brew bundle
+brew bundle --cleanup
