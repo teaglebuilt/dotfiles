@@ -21,28 +21,15 @@ let g:NERDTreeHighlightFoldersFullName = 1
 "   junegunn/goyo
 "..........................
 
-function! s:goyo_enter()
-  setnoshowmode
-  set noshowcmd
-  set scrolloff=999
-  Limelight
-endfunction
-
-function! s:goyo_leave()
-  set showmode
-  set showcmd
-  set scrolloff=5
-  Limelight!
-endfunction
-
 let g:goyo_width = 60
 let g:limelight_default_coefficient = 0.7
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240
 
-nmap <Leader>l <Plug>(Limelight)
-xmap <Leader>l <Plug>(Limelight)
 
-autocmd! User GoyoEnter nested call <SID>goyo_enter()
-autocmd! User GoyoLeave nested call <SID>goyo_leave()
-
+map <leader>gy :Goyo<CR>
+map <leader>ll :Limelight!!<CR>
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
 
 colorscheme jellybeans
