@@ -1,4 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/Users/dteagle1/dotfiles'
+let g:netrw_dirhist_8='/Users/dteagle1/dotfiles/vim'
+let g:netrw_dirhist_7='/Users/dteagle1/dotfiles'
+let g:netrw_dirhist_6='/Users/dteagle1'
+let g:netrw_dirhist_5='/Users/dteagle1/dotfiles'
+let g:netrw_dirhist_4='/Users/dteagle1/.aws'
+let g:netrw_dirhist_3='/Users/dteagle1/workspace/ecoflow/.git'
 let g:netrw_dirhist_2='/usr/share/vim/vim81/syntax'
 let g:netrw_dirhist_1='/usr/share/vim/vim81'

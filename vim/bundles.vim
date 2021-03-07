@@ -12,6 +12,8 @@ Plugin 'tpope/vim-markdown.git'
 Plugin 'hashivim/vim-hashicorp-tools'
 Plugin 'nanotech/jellybeans.vim.git'
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plugin 'junegunn/goyo.vim'
+Plugin 'junegunn/limelight.vim'
 
 call vundle#end()    
 filetype plugin indent on  

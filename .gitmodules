@@ -34,3 +34,9 @@
 [submodule "vim/bundle/vim-nerdtree-syntax-highlight"]
 	path = vim/bundle/vim-nerdtree-syntax-highlight
 	url = https://github.com/tiagofumo/vim-nerdtree-syntax-highlight
+[submodule "vim/bundle/limelight.vim"]
+	path = vim/bundle/limelight.vim
+	url = https://github.com/junegunn/limelight.vim
+[submodule "vim/bundle/limelight.vim"]
+        path = vim/bundle/goyo.vim
+        url = https://github.com/junegunn/goyo.vim
