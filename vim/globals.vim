@@ -2,7 +2,7 @@ set encoding=utf8
 set guifont=Fira\ Code\ Regular\ Nerd\ Font\ Complete:h11
 let g:webdevicons_enable = 1
 let g:webdevicons_enable_nerdtree = 1
-syntax enable
+
 
 
 autocmd StdinReadPre * let s:std_in=1
@@ -32,4 +32,22 @@ map <leader>ll :Limelight!!<CR>
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
+
+".........................
+" Color Settings
+".........................
+
+" Enable 24-bit true colors if your terminal supports it.
+if (has("termguicolors"))
+  " https://github.com/vim/vim/issues/993#issuecomment-255651605
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+  set termguicolors
+endif
+
+syntax enable
+
 colorscheme jellybeans
+
+

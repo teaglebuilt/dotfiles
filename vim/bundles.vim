@@ -14,6 +14,9 @@ Plugin 'nanotech/jellybeans.vim.git'
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'junegunn/goyo.vim'
 Plugin 'junegunn/limelight.vim'
+Plugin 'mhinz/vim-grepper'
+Plugin 'janko/vim-test'
 
-call vundle#end()    
-filetype plugin indent on  
+
+call vundle#end()
+filetype plugin indent on

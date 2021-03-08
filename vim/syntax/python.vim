@@ -1,5 +1,5 @@
 
-Vim syntax file
+
 " Language:     Python
 " Maintainer:   Dmitry Vasiliev <dima at hlabs dot org>
 " URL:          https://github.com/hdima/python-syntax
