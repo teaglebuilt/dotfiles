@@ -1,0 +1,9 @@
+- hosts: localhost
+  connection: local
+  become: true
+
+  tasks:
+    - name: Update and install desktop
+      apt:
+        name: ubuntu-mate-desktop
+        update_cache: yes
