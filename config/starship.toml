@@ -1,0 +1,52 @@
+
+[python]
+python_binary = ["./env/bin/python", "python", "python3", "python2"]
+
+[golang]
+format = "via [🏎💨 $version](bold cyan) "
+
+[docker_context]
+format = "via [🐋 $context](blue bold)"
+
+[kubernetes]
+format = 'on [⛵ $context \($namespace\)](dimmed green) '
+disabled = false
+[kubernetes.context_aliases]
+"dev.local.cluster.k8s" = "dev"
+".*/openshift-cluster/.*" = "openshift"
+"gke_.*_(?P<cluster>[\\w-]+)" = "gke-$cluster"
+
+[helm]
+format = "via [⎈ $version](bold white) "
+
+[rust]
+format = "via [⚙️ $version](red bold)"
+
+[lua]
+format = "via [🌕 $version](bold blue) "
+
+[nix_shell]
+disabled = true
+impure_msg = "[impure shell](bold red)"
+pure_msg = "[pure shell](bold green)"
+format = 'via [☃️ $state( \($name\))](bold blue) '
+
+[nodejs]
+format = "via [🤖 $version](bold green) "
+
+[custom.robot]
+command = "robot"
+files = [".robot"]
+when = """ test "$HOME" == "$PWD" """
+format = " transcending [🤖 $output]($style)"
+
+[terraform]
+format = "[🏎💨 $version$workspace]($style) "
+
+[vagrant]
+format = "via [⍱ $version](bold white) "
+
+[aws]
+format = "on [$symbol$profile]($style) "
+style = "bold blue"
+symbol = "🅰 "

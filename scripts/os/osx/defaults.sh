@@ -1,15 +1,13 @@
 #!/usr/bin/env bash
 
-gread() {
-  defaults read NSGlobalDomain ${@}
-}
+source $ROOT/scripts/helpers.sh
 
-gwrite() {
-  defaults write NSGlobalDomain ${@}
-}
+fancy_echo_line "backspace speed"
+defaults write NSGlobalDomain InitialKeyRepeat 35
+defaults write NSGlobalDomain KeyRepeat -1
 
+fancy_echo_line "show hidden files"
+defaults write com. apple.finder AppleShowAllFiles -bool true
 
-echo "backspace speed"
-gwrite InitialKeyRepeat 35
-gwrite KeyRepeat -1
-
+fancy_echo_line "disable smart quotes"
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false

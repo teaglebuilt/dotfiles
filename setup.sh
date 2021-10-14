@@ -11,6 +11,7 @@ source $ROOT/scripts/helpers.sh
 
 case $(uname -s) in 
     "Darwin")
+        action "setting up dotfiles for macos"
         exec $ROOT/scripts/os/osx/install.sh ;;
     *)
         echo "OS is not registered with dotfiles" ;;
