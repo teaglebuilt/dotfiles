@@ -12,4 +12,8 @@ brew "starship"
 brew 'zsh-syntax-highlighting'
 brew "zsh-autosuggestions"
 brew "diff-so-fancy"
+brew "htop"
+brew "k9s"
 
+brew "terraform"
+brew "kind"
