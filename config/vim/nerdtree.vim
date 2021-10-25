@@ -1,3 +1,26 @@
+let g:webdevicons_enable = 1
+let g:webdevicons_enable_nerdtree = 1
+
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+let g:NERDTreeChDirMode = 3
+
+function NERDRefresh ()
+  if &filetype == "nerdtree"
+      NERDTreeRefreshRoot
+  endif
+endfunction
+
+call NERDRefresh()
+
+
+let g:NERDTreeFileExtensionHighlightFullName = 1
+let g:NERDTreeExactMatchHighlightFullName = 1
+let g:NERDTreePatternMatchHighlightFullName = 1
+let g:NERDTreeHighlightFolders = 1 " enables folder icon highlighting using exact match
+let g:NERDTreeHighlightFoldersFullName = 1 
+
 let NERDChristmasTree = 1                             " Enable nice colors
 let NERDTreeHighlightCursorline = 1                   " Make it easy to see where we are
 let NERDTreeShowBookmarks = 1                         " Make bookmarks visible

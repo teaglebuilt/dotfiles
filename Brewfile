@@ -8,6 +8,7 @@ tap 'aws/tap'
 
 
 brew "vim"
+brew "tmux"
 brew "starship"
 brew 'zsh-syntax-highlighting'
 brew "zsh-autosuggestions"
@@ -17,3 +18,5 @@ brew "k9s"
 
 brew "terraform"
 brew "kind"
+
+brew "redis"

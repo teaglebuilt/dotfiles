@@ -1,8 +1,6 @@
 {
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorTheme": "Community Material Theme Ocean",
-    "editor.fontFamily": "FiraCode Nerd Font",
-    "editor.fontSize": 14,
     "python.languageServer": "Microsoft",
     "go.formatTool": "goimports",
     "go.autocompleteUnimportedPackages": true,
@@ -13,10 +11,15 @@
             "source.organizeImports": true
         },
     },
-    "yaml.completion": true,
+    "[yaml]": {
+        "editor.tabSize": 2,
+        "yaml.completion": true
+    },
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "window.zoomLevel": 0,
     "editor.fontLigatures": null,
-    "terminal.integrated.fontFamily": "FiraCode Nerd Font"
+    "editor.fontSize": 14,
+    "editor.fontFamily": "Caskaydia Cove Nerd Font Complete, Monaco, monospace",
+    "terminal.integrated.fontFamily": "Caskaydia Cove Nerd Font Complete"
 }
