@@ -19,6 +19,17 @@ source $ROOT/scripts/langs/rust.sh
 source $ROOT/scripts/apps/terminal.sh
 installer
 
+echo "Symlink dotfiles config"
+ln -s $ROOT/config ~/.config
+
+echo "setup shell"
+source $ROOT/scripts/shell/zsh.sh
+
 echo "setup vscode"
 source $ROOT/scripts/apps/vim.sh
-source $ROOT/scripts/apps/vscode.sh
+# source $ROOT/scripts/apps/vscode.sh
+
+
+for file in $ROOT/dots/*; do
+  echo file
+done

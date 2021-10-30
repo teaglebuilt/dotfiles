@@ -2,6 +2,9 @@
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorTheme": "Community Material Theme Ocean",
     "python.languageServer": "Microsoft",
+    "[python]": {
+        "editor.tabSize": 4
+    },
     "go.formatTool": "goimports",
     "go.autocompleteUnimportedPackages": true,
     "go.lintOnSave": "package",

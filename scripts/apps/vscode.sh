@@ -3,5 +3,8 @@
 
 if [[ $(uname -s) == "Darwin" ]]; then
  # /Library/Application Support/Code/User/settings.json
-    code --install-extension PKief.material-icon-theme
+    if ! command -v brew >/dev/null; then
+        code --install-extension PKief.material-icon-theme
+        code --install-extension 4ops.terraform
+    fi
 fi

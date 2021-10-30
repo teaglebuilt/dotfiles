@@ -20,3 +20,9 @@ brew "terraform"
 brew "kind"
 
 brew "redis"
+
+# Fonts
+brew font-hack-nerd-font
+
+# Security
+brew nmap
