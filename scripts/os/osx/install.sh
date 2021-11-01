@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 ROOT=$(pwd)
-
 source $ROOT/scripts/helpers.sh
+
 
 if ! command -v brew >/dev/null; then
  fancy_echo "Installing Homebrew ..."
@@ -29,7 +29,13 @@ echo "setup vscode"
 source $ROOT/scripts/apps/vim.sh
 # source $ROOT/scripts/apps/vscode.sh
 
-
-for file in $ROOT/dots/*; do
-  echo file
+shopt -s dotglob
+for f in $ROOT/dots/*; do
+    filename="${f##*/}"
+    if [ -d "$f" ]; then
+        echo "$f"\n
+    else
+        ln -s -f $f $HOME/$filename
+        ok "symlink created for $HOME/$filename"
+    fi
 done

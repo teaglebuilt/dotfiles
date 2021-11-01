@@ -18,11 +18,17 @@ brew "k9s"
 
 brew "terraform"
 brew "kind"
+brew "kubernetes-cli"
+brew "minikube"
+brew "lua"
 
 brew "redis"
+brew "sqlite"
+
+brew "websocat"
 
 # Fonts
-brew font-hack-nerd-font
+brew "font-hack-nerd-font"
 
 # Security
-brew nmap
+brew "nmap"
