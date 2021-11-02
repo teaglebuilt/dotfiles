@@ -21,7 +21,7 @@ function code {
 	fi
 }
 
-source $HOME/.aliases
+source $HOME/mydots/config/zsh/aliases.zsh
 
 ## Evaluate ##
 eval "$(pyenv init --path)"

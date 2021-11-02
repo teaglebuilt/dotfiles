@@ -5,6 +5,12 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-drivers"
 tap "homebrew/services"
 tap 'aws/tap'
+tap 'aws/tap'
+
+# Langs
+brew "pyenv"
+brew "go"
+brew "node"
 
 
 brew "vim"
@@ -21,7 +27,9 @@ brew "kind"
 brew "kubernetes-cli"
 brew "minikube"
 brew "lua"
+brew "fluxctl"
 
+# DB's
 brew "redis"
 brew "sqlite"
 
@@ -32,3 +40,6 @@ brew "font-hack-nerd-font"
 
 # Security
 brew "nmap"
+
+# Apps
+cask 'visual-studio-code'
