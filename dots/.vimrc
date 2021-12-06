@@ -1,5 +1,7 @@
 set encoding=UTF-8
 set guifont=Caskaydia\ Cove\ Nerd\ Font\ Complete:h11
+set backspace=indent,eol,start
+
 
 if has("unix")
   let g:uname = system("echo -n \"$(uname)\"")

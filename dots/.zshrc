@@ -1,5 +1,6 @@
 
 ## Paths ##
+export NVM_DIR=~/.nvm
 export RUST_HOME=/Users/teaglebuilt/.rustup
 export CARGO_HOME=/Users/teaglebuilt/.cargo/bin
 export PYENV_ROOT="$HOME/.pyenv"
@@ -24,7 +25,9 @@ function code {
 source $HOME/mydots/config/zsh/aliases.zsh
 
 ## Evaluate ##
+source $(brew --prefix nvm)/nvm.sh
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
+eval "$(direnv hook zsh)"
 
 eval "$(starship init zsh)"

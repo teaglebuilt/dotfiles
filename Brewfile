@@ -10,8 +10,9 @@ tap 'aws/tap'
 # Langs
 brew "pyenv"
 brew "go"
-brew "node"
-
+brew "nvm"
+brew "terraform"
+brew "lua"
 
 brew "vim"
 brew "tmux"
@@ -20,26 +21,37 @@ brew 'zsh-syntax-highlighting'
 brew "zsh-autosuggestions"
 brew "diff-so-fancy"
 brew "htop"
-brew "k9s"
 
-brew "terraform"
+
+# Kubernetes
 brew "kind"
 brew "kubernetes-cli"
 brew "minikube"
-brew "lua"
+brew "k9s"
 brew "fluxctl"
+brew "kubeseal"
+brew "k3d"
+
 
 # DB's
 brew "redis"
 brew "sqlite"
 
+# Utils
+brew "httpie"
 brew "websocat"
+brew "pre-commit"
+brew "watch"
+brew "direnv"
+brew "jq"
+brew "sops"
 
 # Fonts
 brew "font-hack-nerd-font"
 
 # Security
 brew "nmap"
+brew "telnet"
 
 # Apps
 cask 'visual-studio-code'
