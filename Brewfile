@@ -5,7 +5,7 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-drivers"
 tap "homebrew/services"
 tap 'aws/tap'
-tap 'aws/tap'
+tap 'flux'
 
 # Langs
 brew "pyenv"
@@ -14,6 +14,7 @@ brew "nvm"
 brew "terraform"
 brew "lua"
 
+# Shell
 brew "vim"
 brew "tmux"
 brew "starship"
@@ -24,14 +25,16 @@ brew "htop"
 
 
 # Kubernetes
-brew "kind"
 brew "kubernetes-cli"
 brew "minikube"
+brew "kind"
+brew "helm"
 brew "k9s"
-brew "fluxctl"
+brew "fluxcd"
+brew "kustomize"
 brew "kubeseal"
 brew "k3d"
-
+brew "kubeval"
 
 # DB's
 brew "redis"
@@ -44,6 +47,7 @@ brew "pre-commit"
 brew "watch"
 brew "direnv"
 brew "jq"
+brew "gpg"
 brew "sops"
 
 # Fonts
