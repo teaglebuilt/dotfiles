@@ -22,7 +22,7 @@ function code {
 	fi
 }
 
-source $HOME/mydots/config/zsh/aliases.zsh
+source $HOME/.config/zsh/aliases.zsh
 
 ## Evaluate ##
 source $(brew --prefix nvm)/nvm.sh
