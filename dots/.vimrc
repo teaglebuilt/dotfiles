@@ -14,4 +14,4 @@ call plug#end()
 
 for f in split(glob('$HOME/mydots/config/vim/*.vim'), '\n')
     exec 'source' f
-endfor
+endforpe

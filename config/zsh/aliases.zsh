@@ -1,8 +1,4 @@
-<<<<<<< HEAD:config/zsh/aliases.zsh
 alias run="./run.sh"
-=======
-alias run=./run.sh
->>>>>>> 1329dea5ce54d41f6eb835139e7faafd5d934a03:config/zsh/.aliases
 alias load="source ~/.zshrc"
 alias k="kubectl"
 alias d="docker"

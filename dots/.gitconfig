@@ -1,6 +1,11 @@
-[user]
-	name = teaglebuilt
-	email = dillan.teagle.va@gmail.com
+[includeIf "gitdir:~/personal/"]
+	path = ~/.gitconfig-personal
+
+[includeIf "gitdir:~/mydots/"]
+	path = ~/.gitconfig-personal
+
+[includeIf "gitdir:~/work/"]
+	path = ~/.gitconfig-work
 
 [color]
 	ui = true
