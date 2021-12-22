@@ -2,6 +2,7 @@ set encoding=UTF-8
 set guifont=Caskaydia\ Cove\ Nerd\ Font\ Complete:h11
 set backspace=indent,eol,start
 
+
 if has("unix")
   let g:uname = system("echo -n \"$(uname)\"")
 endif
@@ -12,5 +13,5 @@ call plug#begin()
 call plug#end()
 
 for f in split(glob('$HOME/mydots/config/vim/*.vim'), '\n')
-    exe 'source' f
+    exec 'source' f
 endfor

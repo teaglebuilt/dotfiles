@@ -20,5 +20,11 @@
         "terminal.integrated.fontFamily": "Caskaydia Cove Nerd Font Complete",
     },
     "editor.fontFamily": "Caskaydia Cove Nerd Font Complete, Monaco, monospace",
+<<<<<<< HEAD
     "window.zoomLevel": 1
+=======
+    "terminal.integrated.env.osx": {
+        "editor.fontFamily": "Caskaydia Cove Nerd Font Complete, Monaco, monospace",
+    }
+>>>>>>> 1329dea5ce54d41f6eb835139e7faafd5d934a03
 }

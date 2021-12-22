@@ -17,6 +17,4 @@ else
     fi
 fi
 
-
-ln -s $(pwd)/dots/.zshrc $HOME/.zshrc
 source $HOME/.zshrc
