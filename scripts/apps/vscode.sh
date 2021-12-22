@@ -8,3 +8,6 @@ if [[ $(uname -s) == "Darwin" ]]; then
         code --install-extension 4ops.terraform
     fi
 fi
+
+
+ln -sf settings.json $HOME/Library/Application\ Support/settings.json

@@ -6,8 +6,7 @@ source $ROOT/scripts/helpers.sh
 
 if ! command -v brew >/dev/null; then
  fancy_echo "Installing Homebrew ..."
-   curl -fsS \
-     'https://raw.githubusercontent.com/Homebrew/install/master/install' | ruby
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 echo "Bundle all macos homebrew dependencies"

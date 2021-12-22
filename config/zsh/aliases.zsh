@@ -1,3 +1,4 @@
+alias run="./run.sh"
 alias load="source ~/.zshrc"
 alias k="kubectl"
 alias d="docker"

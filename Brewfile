@@ -32,3 +32,6 @@ brew "font-hack-nerd-font"
 
 # Security
 brew "nmap"
+
+cask "visual-studio-code"
+cask "slack"
