@@ -1,0 +1,18 @@
+---
+- hosts: all
+  connection: local
+  tasks:
+  - name: check operating system
+    shell: uname
+    ignore_errors: yes
+    register: os
+  - name: check processor
+    shell: uname -m
+    ignore_errors: yes
+    register: proc
+  - include_role:
+      name: roles/macos/arm64
+    when: (os.stdout == 'Darwin') and (proc.stdout == 'arm64')
+  - include_role:
+      name: roles/macos/x86_64
+    when: (os.stdout == 'Darwin') and (proc.stdout == 'x86_64')

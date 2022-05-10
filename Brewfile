@@ -1,62 +1,72 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
+tap "homebrew/services"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-drivers"
 tap "homebrew/services"
 tap 'aws/tap'
 tap 'flux'
+tap "timescale/tap"
+tap "github/gh"
 
-# Langs
-brew "pyenv"
-brew "go"
-brew "nvm"
-brew "terraform"
-brew "lua"
-
-# Shell
-brew "vim"
-brew "tmux"
-brew "starship"
-brew 'zsh-syntax-highlighting'
-brew "zsh-autosuggestions"
+brew "ansifilter"
+brew "asdf"
+brew "awslogs"
+brew "cmake"
+brew "coreutils"
+brew "cloudfared"
+brew "direnv"
 brew "diff-so-fancy"
-brew "htop"
-
-
-# Kubernetes
-brew "kubernetes-cli"
-brew "minikube"
-brew "kind"
-brew "helm"
-brew "k9s"
 brew "fluxcd"
+brew "font-hack-nerd-font"
+brew "fzf"
+brew "gcc"
+brew "git"
+brew "gnupg"
+brew "go"
+brew "gradle"
+brew "grunt-cli"
+brew "helm"
+brew "htop"
+brew "httpie"
+brew "jq"
+brew "kind"
+brew "kubernetes-cli"
 brew "kustomize"
 brew "kubeseal"
 brew "k3d"
+brew "k9s"
 brew "kubeval"
-
-# DB's
-brew "redis"
-brew "sqlite"
-
-# Utils
-brew "httpie"
-brew "websocat"
-brew "pre-commit"
-brew "watch"
-brew "direnv"
-brew "jq"
-brew "gpg"
-brew "sops"
-
-# Fonts
-brew "font-hack-nerd-font"
-
-# Security
+brew "minikube"
+brew "mysql-client"
+brew "mysql@5.7", restart_service: true
 brew "nmap"
+brew "lua"
+brew "luarocks"
+brew "node", link: false
+brew "nvm"
+brew "pre-commit"
+brew "postgresql", restart_service: true
+brew "pyenv"
+brew "pyenv-virtualenv"
+brew "pyenv-virtualenvwrapper"
+brew "redis"
+brew "sops"
+brew "starship"
+brew "sqlite"
 brew "telnet"
+brew "terraform"
+brew "tmux"
+brew "tree"
+brew "vim"
+brew "watch"
+brew "wget"
+brew "websocat"
+brew 'zsh-syntax-highlighting'
+brew "zsh-autosuggestions"
 
-
+cask "emacs"
+cask "mysql-connector-python"
 cask "visual-studio-code"
 cask "slack"

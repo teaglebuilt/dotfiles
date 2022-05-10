@@ -5,9 +5,9 @@ on:
 
 jobs:
   osx:
-    name: Run full installation
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@master
+      - name: Check out the codebase.
+        uses: actions/checkout@v2
       - name: Run install
         run : ./setup.sh
