@@ -1,4 +1,4 @@
 ---
 - name: Bundle homebrew dependencies
   shell:
-    cmd: /usr/local/bin/brew bundle --cleanup
+    cmd: brew bundle --cleanup
