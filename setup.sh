@@ -12,8 +12,10 @@ setup_repo() {
     $DOTFILES="$HOME/dotfiles"
     if !$DOTFILES; then
         fancy_echo "linking repo to $HOME/dotfiles"
-         ln -s -f  $HOME/$filename
+        ln -s ../dotfiles  $HOME/$filename
+    fi
 }
+
 install_homebrew() {
     if ! command -v brew >/dev/null; then
         fancy_echo "Installing Homebrew ..."
