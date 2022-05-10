@@ -26,7 +26,6 @@ install_homebrew() {
 }
 
 bootstrap_macos() {
-    setup_repo
     install_homebrew
     brew install ansible
 }
