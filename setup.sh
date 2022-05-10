@@ -8,6 +8,12 @@ find $ROOT/bin/ -type f -iname "*.sh" -exec chmod +x {} \;
 
 source $ROOT/scripts/helpers.sh
 
+setup_repo() {
+    $DOTFILES="$HOME/dotfiles"
+    if !$DOTFILES; then
+        fancy_echo "linking repo to $HOME/dotfiles"
+         ln -s -f  $HOME/$filename
+}
 install_homebrew() {
     if ! command -v brew >/dev/null; then
         fancy_echo "Installing Homebrew ..."
@@ -18,6 +24,7 @@ install_homebrew() {
 }
 
 bootstrap_macos() {
+    setup_repo
     install_homebrew
     brew install ansible
 }

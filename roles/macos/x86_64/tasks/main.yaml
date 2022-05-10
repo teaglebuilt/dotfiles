@@ -3,3 +3,5 @@
   tags: ["homebrew"]
 - include: shell.yaml
   tags: ["zshrc", "bashrc"]
+- include: alacritty.yaml
+  tags: ["alacritty"]
