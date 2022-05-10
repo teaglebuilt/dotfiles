@@ -28,6 +28,7 @@ install_homebrew() {
 bootstrap_macos() {
     install_homebrew
     brew install ansible
+    ansible-playbook -i hosts main.yaml
 }
 
 case $(uname -s) in 
