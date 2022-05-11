@@ -14,7 +14,8 @@
         "editor.tabSize": 2
     },
     "editor.suggestSelection": "first",
-    "editor.fontSize": 14,
+    "editor.fontSize": 16,
+    "editor.fontLigatures": true,
     "terminal.integrated.env.osx": {
         "editor.fontFamily": "Caskaydia Cove Nerd Font Complete, Monaco, monospace",
         "terminal.integrated.fontFamily": "Caskaydia Cove Nerd Font Complete",
