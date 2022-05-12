@@ -1,0 +1,5 @@
+---
+- name: Provision macos settings
+  vars:
+    become_user: true
+  script: "./osx_settings.sh"
