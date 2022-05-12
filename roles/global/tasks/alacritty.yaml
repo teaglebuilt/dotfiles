@@ -9,3 +9,11 @@
 - name: install alacritty
   shell: brew install --cask --no-quarantine alacritty
   when: alacritty_stat is changed
+
+- stat: path={{ lookup('env', 'HOME') }}/.config/alacritty.yml
+  register: alacritty_conf
+
+- name: link alacritty
+  command: |
+    ln -s -f {{ dotfiles_path }}/config/alacritty.yml {{ lookup('env', 'HOME') }}/.config/alacritty.yml
+  when: not alacritty_conf.stat.exists

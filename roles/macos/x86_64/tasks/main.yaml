@@ -7,7 +7,7 @@
   tags: ["tmux"]
 - import_tasks: "{{ common_tasks }}/shell.yaml"
   tags: ["zshrc", "bashrc"]
-- include: alacritty.yaml
+- import_tasks: "{{ global_tasks }}/alacritty.yaml"
   tags: ["alacritty"]
 - import_tasks: "{{ common_tasks }}/vscode.yaml"
   tags: ["vscode"]

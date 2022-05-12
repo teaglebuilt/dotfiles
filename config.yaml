@@ -1,5 +1,7 @@
 ansible_user: "${ANSIBLE_USER}"
 ansible_password: "${ANSIBLE_PASSWORD}"
+dotfiles_path: "${DOTFILES_HOME}"
+home_path: "${HOME}"
 
 macos:
   vscode:

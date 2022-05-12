@@ -1,7 +1,3 @@
-ansible_user: "${ANSIBLE_USER}"
-ansible_password: "${ANSIBLE_PASSWORD}"
-dotfiles_path: "${DOTFILES_HOME}"
-home_path: "${HOME}"
 alacritty_path: "/Applications/Alacritty.app"
 global_tasks: "roles/global/tasks"
 common_tasks: "roles/macos/common/tasks"
