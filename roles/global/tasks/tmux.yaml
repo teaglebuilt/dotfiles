@@ -1,0 +1,7 @@
+---
+- stat: path={{ lookup('env', 'HOME') }}/.config/tmux.conf
+  register: tmux_conf
+- name: link tmux
+  command: |
+    ln -s -f {{ dotfiles_path }}/config/tmux.conf {{ lookup('env', 'HOME') }}/.config/tmux.conf
+  when: not tmux_conf.stat.exists

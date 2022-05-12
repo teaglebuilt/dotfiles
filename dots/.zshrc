@@ -15,23 +15,13 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 export PATH="$PATH:$HOME/.poetry/bin"
 export PATH=$PATH:$CARGO_HOME
 export PATH=$JAVA_HOME/bin:$ANT_HOME/bin:$M2:$PATH
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 export PYENV_VERSION=3.9.5
 
 ## Functions ##
 
-# Open VSCode from terminal
-function code {
-	if [[ $# = 0 ]]; then
-		open -a "Visual Studio Code"
-	else
-		local argPath="$1"
-		[[ $1 = /* ]] && argPath="$1" || argPath="$PWD/${1#./}"
-		open -a "Visual Studio Code" "$argPath"
-	fi
-}
-
-source $HOME/.config/zsh/aliases.zsh
+source $HOME/.aliases.zsh
 
 ## Evaluate ##
 source $(brew --prefix nvm)/nvm.sh

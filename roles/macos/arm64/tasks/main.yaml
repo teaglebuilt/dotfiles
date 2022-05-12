@@ -1,7 +1,0 @@
----
-- include: brew.yaml
-  tags: ["homebrew"]
-- include: alacritty.yaml
-  tags: ["alacritty"]
-- include: shell.yaml
-  tags: ["zshrc", "bashrc"]

@@ -1,0 +1,9 @@
+---
+- name: "Check if global config directory exists"
+  stat:
+    path: "{{ lookup('env', 'HOME') }}/.config/"
+  register: global_config
+- name: create config
+  command: |
+    mkdir {{ lookup('env', 'HOME') }}/.config
+  when: not global_config.stat.exists

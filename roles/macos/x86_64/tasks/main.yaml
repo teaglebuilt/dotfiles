@@ -1,7 +1,11 @@
 ---
 - include: brew.yaml
   tags: ["homebrew"]
-- include: shell.yaml
+- import_tasks: "{{ global_tasks }}/config.yaml"
+  tags: ["config"]
+- import_tasks: "{{ global_tasks }}/tmux.yaml"
+  tags: ["tmux"]
+- import_tasks: "{{ common_tasks }}/shell.yaml"
   tags: ["zshrc", "bashrc"]
 - include: alacritty.yaml
   tags: ["alacritty"]

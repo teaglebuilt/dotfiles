@@ -14,11 +14,49 @@
         "editor.tabSize": 2
     },
     "editor.suggestSelection": "first",
-    "editor.fontSize": 14,
+    "editor.fontSize": 12,
     "editor.fontLigatures": true,
-    "terminal.integrated.env.osx": {
+    // "terminal.integrated.env.osx": {
+    //     "editor.fontFamily": "Caskaydia Cove Nerd Font Complete, Monaco, monospace",
+    //     "editor.fontSize": 14,
+    //     "terminal.integrated.fontFamily": "Caskaydia Cove Nerd Font Complete",
+    // },
+    "terminal.integrated": {
         "editor.fontFamily": "Caskaydia Cove Nerd Font Complete, Monaco, monospace",
+        "editor.fontSize": 12,
         "terminal.integrated.fontFamily": "Caskaydia Cove Nerd Font Complete",
     },
-    "editor.fontFamily": "Caskaydia Cove Nerd Font Complete, Monaco, monospace"
+    "terminal.integrated.fontSize": 12,
+    "window.zoomLevel": 1,
+    "editor.fontFamily": "Caskaydia Cove Nerd Font Complete, Monaco, monospace",
+    "json.schemas": [],
+    "yaml.customTags": [
+        "!And",
+        "!And sequence",
+        "!If",
+        "!If sequence",
+        "!Not",
+        "!Not sequence",
+        "!Equals",
+        "!Equals sequence",
+        "!Or",
+        "!Or sequence",
+        "!FindInMap",
+        "!FindInMap sequence",
+        "!Base64",
+        "!Join",
+        "!Join sequence",
+        "!Cidr",
+        "!Ref",
+        "!Sub",
+        "!Sub sequence",
+        "!GetAtt",
+        "!GetAZs",
+        "!ImportValue",
+        "!ImportValue sequence",
+        "!Select",
+        "!Select sequence",
+        "!Split",
+        "!Split sequence"
+    ]
 }
