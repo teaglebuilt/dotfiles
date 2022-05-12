@@ -5,3 +5,5 @@
   tags: ["zshrc", "bashrc"]
 - include: alacritty.yaml
   tags: ["alacritty"]
+- import_tasks: "{{ common_tasks }}/vscode.yaml"
+  tags: ["vscode"]

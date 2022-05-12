@@ -1,6 +1,6 @@
 {
     "workbench.iconTheme": "material-icon-theme",
-    "python.languageServer": "Microsoft",
+    "python.languageServer": "Pylance",
     "[python]": {
         "editor.tabSize": 4
     },
@@ -14,12 +14,11 @@
         "editor.tabSize": 2
     },
     "editor.suggestSelection": "first",
-    "editor.fontSize": 16,
+    "editor.fontSize": 14,
     "editor.fontLigatures": true,
     "terminal.integrated.env.osx": {
         "editor.fontFamily": "Caskaydia Cove Nerd Font Complete, Monaco, monospace",
         "terminal.integrated.fontFamily": "Caskaydia Cove Nerd Font Complete",
     },
-    "editor.fontFamily": "Caskaydia Cove Nerd Font Complete, Monaco, monospace",
-    "window.zoomLevel": 1
+    "editor.fontFamily": "Caskaydia Cove Nerd Font Complete, Monaco, monospace"
 }

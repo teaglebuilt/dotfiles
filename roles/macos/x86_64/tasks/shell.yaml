@@ -4,11 +4,6 @@
 - name: Fix broken /etc/zshenv
   command: creates="/etc/zprofile" mv /etc/zshenv /etc/zprofile
   become_method: sudo
-- name: Change current user shell
-  user:
-    name: "dteagle"
-    shell: /bin/zsh
-  become: true
 
 - name: Checks for oh-my-zsh installation | stat
   stat:
