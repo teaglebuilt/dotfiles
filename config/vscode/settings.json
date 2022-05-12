@@ -14,19 +14,13 @@
         "editor.tabSize": 2
     },
     "editor.suggestSelection": "first",
-    "editor.fontSize": 12,
+    "editor.fontSize": 14,
     "editor.fontLigatures": true,
-    // "terminal.integrated.env.osx": {
-    //     "editor.fontFamily": "Caskaydia Cove Nerd Font Complete, Monaco, monospace",
-    //     "editor.fontSize": 14,
-    //     "terminal.integrated.fontFamily": "Caskaydia Cove Nerd Font Complete",
-    // },
-    "terminal.integrated": {
+    "terminal.integrated.env.osx": {
         "editor.fontFamily": "Caskaydia Cove Nerd Font Complete, Monaco, monospace",
-        "editor.fontSize": 12,
-        "terminal.integrated.fontFamily": "Caskaydia Cove Nerd Font Complete",
+        "editor.fontSize": 14,
+        "terminal.integrated.fontFamily": "Caskaydia Cove Nerd Font Complete"
     },
-    "terminal.integrated.fontSize": 12,
     "window.zoomLevel": 1,
     "editor.fontFamily": "Caskaydia Cove Nerd Font Complete, Monaco, monospace",
     "json.schemas": [],

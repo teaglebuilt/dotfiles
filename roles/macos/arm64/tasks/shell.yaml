@@ -1,0 +1,25 @@
+---
+- name: Make sure zsh is installed
+  homebrew: name=zsh state=present
+- name: Fix broken /etc/zshenv
+  command: creates="/etc/zprofile" mv /etc/zshenv /etc/zprofile
+  become_method: sudo
+
+- name: "Check if starship installed"
+  stat:
+    path: "{{ homebrew_path }}/starship"
+  register: starship_installed
+
+- name: "Check if starship config exists"
+  stat:
+    path: "{{ lookup('env', 'HOME') }}/starship.toml"
+  register: starship_link
+  
+- name: "Install starship"
+  command: curl -sS https://starship.rs/install.sh | sh
+  when: not starship_installed.stat.exists
+
+- name: "Link starship config"
+  command: |
+    ln -s -f {{ dotfiles_path }}/config/starship.toml {{ lookup('env', 'HOME') }}
+  when: not starship_link.stat.exists

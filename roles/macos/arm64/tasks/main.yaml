@@ -5,7 +5,7 @@
   tags: ["config"]
 - import_tasks: "{{ global_tasks }}/tmux.yaml"
   tags: ["tmux"]
-- import_tasks: "{{ common_tasks }}/shell.yaml"
+- include: shell.yaml
   tags: ["zshrc", "bashrc"]
 - import_tasks: "{{ global_tasks }}/alacritty.yaml"
   tags: ["alacritty"]
