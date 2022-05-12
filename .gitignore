@@ -1,2 +1,2 @@
-apps/*
 Brewfile.lock.json
+.envrc

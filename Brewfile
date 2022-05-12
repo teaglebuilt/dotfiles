@@ -36,6 +36,7 @@ brew "k3d"
 brew "k9s"
 brew "kubeval"
 brew "minikube"
+brew "multipass"
 brew "mysql-client"
 brew "mysql@5.7", restart_service: true
 brew "nmap"
@@ -63,4 +64,5 @@ brew "websocat"
 brew 'zsh-syntax-highlighting'
 brew "zsh-autosuggestions"
 
+cask "multipass"
 # cask "font-hack-nerd-font"

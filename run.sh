@@ -56,7 +56,7 @@ prereq() {
 }
 
 bootstrap() {
-    ansible-playbook -i hosts \
+    envsubst | ansible-playbook -i hosts \
         --extra-vars='@config.yaml' \
         main.yaml
 }

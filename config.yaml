@@ -1,3 +1,6 @@
+ansible_user: "${ANSIBLE_USER}"
+ansible_password: "${ANSIBLE_PASSWORD}"
+
 macos:
   vscode:
     links:

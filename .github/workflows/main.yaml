@@ -9,5 +9,17 @@ jobs:
     steps:
       - name: Check out the codebase.
         uses: actions/checkout@v2
+      - name: Set Permissions
+        run : chmod +x run.sh
       - name: Run install
-        run : ./setup.sh
+        run : ./run.sh bootstrap
+
+  ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the codebase.
+        uses: actions/checkout@v2
+      - name: Set Permissions
+        run : chmod +x run.sh
+      - name: Run install
+        run : ./run.sh bootstrap
