@@ -13,16 +13,39 @@
     "[yaml]": {
         "editor.tabSize": 2
     },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      },
+      "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      },
+      "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      },
+      "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      },
+      "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      },
+    
+      "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      },
+      "[handlebars]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+      },
     "editor.suggestSelection": "first",
+    "editor.tabSize": 2,
     "editor.fontSize": 14,
     "editor.fontLigatures": true,
+    "editor.fontFamily": "Caskaydia Cove Nerd Font Complete, Monaco, monospace",
+    "terminal.integrated.defaultProfile.osx": "zsh",
     "terminal.integrated.env.osx": {
-        "editor.fontFamily": "Caskaydia Cove Nerd Font Complete, Monaco, monospace",
         "editor.fontSize": 14,
-        "terminal.integrated.fontFamily": "Caskaydia Cove Nerd Font Complete"
+        "terminal.integrated.fontFamily": "Caskaydia Cove Nerd Font Complete, monospace"
     },
     "window.zoomLevel": 1,
-    "editor.fontFamily": "Caskaydia Cove Nerd Font Complete, Monaco, monospace",
     "json.schemas": [],
     "yaml.customTags": [
         "!And",
@@ -52,5 +75,6 @@
         "!Select sequence",
         "!Split",
         "!Split sequence"
-    ]
+    ],
+    "redhat.telemetry.enabled": false
 }

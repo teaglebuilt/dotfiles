@@ -12,14 +12,34 @@
 
 - name: "Check if starship config exists"
   stat:
-    path: "{{ lookup('env', 'HOME') }}/starship.toml"
+    path: "{{ lookup('env', 'HOME') }}/.config/starship.toml"
   register: starship_link
-  
+
+- name: "Check if zshrc config exists"
+  stat:
+    path: "{{ lookup('env', 'HOME') }}/.zshrc"
+  register: zshrc_link
+
+- name: "Check if zsh aliases exists"
+  stat:
+    path: "{{ lookup('env', 'HOME') }}/.aliases.zsh"
+  register: zsh_aliases_link
+
 - name: "Install starship"
   command: curl -sS https://starship.rs/install.sh | sh
   when: not starship_installed.stat.exists
 
 - name: "Link starship config"
   command: |
-    ln -s -f {{ dotfiles_path }}/config/starship.toml {{ lookup('env', 'HOME') }}
+    ln -s -f {{ dotfiles_path }}/config/starship.toml {{ lookup('env', 'HOME') }}/.config/starship.toml
   when: not starship_link.stat.exists
+
+- name: "Link zshrc"
+  command: |
+    ln -s -f {{ dotfiles_path }}/dots/.zshrc {{ lookup('env', 'HOME') }}/.zshrc
+  when: not zshrc_link.stat.exists
+
+- name: "Link zsh aliases"
+  command: |
+    ln -s -f {{ dotfiles_path }}/dots/aliases.zsh {{ lookup('env', 'HOME') }}/.aliases.zsh
+  when: not zsh_aliases_link.stat.exists

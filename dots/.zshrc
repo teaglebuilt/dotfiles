@@ -19,6 +19,8 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 
 export PYENV_VERSION=3.9.5
 
+export AWS_SHARED_CREDENTIALS_FILE=~/.aws/aws-developer
+
 ## Functions ##
 
 source $HOME/.aliases.zsh

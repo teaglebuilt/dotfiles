@@ -3,15 +3,14 @@
 ROOT=$(pwd)
 source $ROOT/scripts/helpers.sh
 
-fancy_echo_line "backspace speed"
+fancy_echo "backspace speed"
 defaults write NSGlobalDomain InitialKeyRepeat 35
-defaults write NSGlobalDomain KeyRepeat -1
+defaults write NSGlobalDomain KeyRepeat -5
 
-fancy_echo_line "show hidden files"
-defaults write com. apple.finder AppleShowAllFiles -bool true
+fancy_echo "show hidden files"
+defaults write com.apple.finder AppleShowAllFiles -bool true
 
-fancy_echo_line "disable smart quotes"
-defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+fancy_echo "disable smart quotes"
 
 ###############################################################################
 # Activity Monitor                                                            #

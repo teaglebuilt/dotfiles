@@ -21,3 +21,12 @@ macos:
       - ms-vscode-remote.remote-containers
       - PKief.material-icon-theme
       - AmazonWebServices.aws-toolkit-vscode
+      - jawandarajbir.react-vscode-extension-pack
+      - infeng.vscode-react-typescript
+      - DigitalBrainstem.javascript-ejs-support
+      - technosophos.vscode-helm
+      - redhat.ansible
+      - Orta.vscode-jest
+      - dsznajder.es7-react-js-snippets
+      - golang.go
+      - ms-vscode.makefile-tools

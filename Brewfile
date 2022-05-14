@@ -63,6 +63,6 @@ brew "wget"
 brew "websocat"
 brew 'zsh-syntax-highlighting'
 brew "zsh-autosuggestions"
-brew "font-caskaydia-cove-nerd-font"
 
 cask "multipass"
+cask "font-caskaydia-cove-nerd-font"
