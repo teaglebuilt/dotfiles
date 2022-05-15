@@ -3,14 +3,34 @@
 ROOT=$(pwd)
 source $ROOT/scripts/helpers.sh
 
+###############################################################################
+# Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
+###############################################################################
+
 fancy_echo "backspace speed"
-defaults write NSGlobalDomain InitialKeyRepeat 35
-defaults write NSGlobalDomain KeyRepeat -5
+defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain InitialKeyRepeat -int 12
+
+###############################################################################
+# Finder                                                                      #
+###############################################################################
 
 fancy_echo "show hidden files"
 defaults write com.apple.finder AppleShowAllFiles -bool true
 
-fancy_echo "disable smart quotes"
+
+###############################################################################
+# Screen                                                                      #
+###############################################################################
+
+# Require password immediately after sleep or screen saver begins
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0
+
+# Remove the auto-hiding Dock delay
+defaults write com.apple.dock autohide-delay -float 0
+# Remove the animation when hiding/showing the Dock
+defaults write com.apple.dock autohide-time-modifier -float 0
 
 ###############################################################################
 # Activity Monitor                                                            #

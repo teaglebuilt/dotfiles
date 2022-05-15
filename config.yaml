@@ -30,3 +30,4 @@ macos:
       - dsznajder.es7-react-js-snippets
       - golang.go
       - ms-vscode.makefile-tools
+      - coolbear.systemd-unit-file
