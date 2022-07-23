@@ -31,3 +31,4 @@ macos:
       - golang.go
       - ms-vscode.makefile-tools
       - coolbear.systemd-unit-file
+      - hashicorp.terraform
