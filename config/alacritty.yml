@@ -114,14 +114,13 @@ font:
   normal:
     # Font family
     #
-    Default:
-      - (macOS) Caskaydia Cove Nerd Font
+      # - "Caskaydia Cove Nerd Font"
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: Monaco
+    family: CaskaydiaCove Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    style: Regular
+    # style: Monospace
 
   # Bold font face
   #bold:
