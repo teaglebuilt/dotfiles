@@ -36,7 +36,7 @@ format = "via [🤖 $version](bold green) "
 
 [custom.robot]
 command = "robot"
-files = [".robot"]
+detect_files = [".robot"]
 when = """ test "$HOME" == "$PWD" """
 format = " transcending [🤖 $output]($style)"
 
@@ -50,3 +50,9 @@ format = "via [⍱ $version](bold white) "
 format = "on [$symbol$profile]($style) "
 style = "bold blue"
 symbol = "🅰 "
+
+[custom.stunnel]
+when = "ps aux | grep vim | grep -v grep"
+command = "ps -o etime= -p $(ps aux | grep vim | grep -v grep | awk '{print $2}')"
+style = "red"
+format = "[TUNNEL OPEN for $output]($style)"

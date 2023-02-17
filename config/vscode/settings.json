@@ -1,85 +1,103 @@
 {
-    "workbench.iconTheme": "material-icon-theme",
-    "python.languageServer": "Pylance",
-    "[python]": {
-        "editor.tabSize": 4
+  "[go]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
     },
-    "[go]": {
-        "editor.formatOnSave": true,
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": true
-        }
-    },
-    "[yaml]": {
-        "editor.tabSize": 2
-    },
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-      },
-      "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-      },
-      "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-      },
-      "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-      },
-      "[jsonc]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-      },
-    
-      "[vue]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-      },
-      "[handlebars]": {
-        "editor.defaultFormatter": "vscode.html-language-features"
-      },
-    "editor.suggestSelection": "first",
-    "editor.tabSize": 2,
+    "editor.formatOnSave": true
+  },
+  "[handlebars]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.tabSize": 4
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.tabSize": 2
+  },
+  "editor.acceptSuggestionOnEnter": "on",
+  "editor.accessibilitySupport": "off",
+  "editor.fontFamily": "Fantasque Sans Mono Bold Italic Nerd Font Complete Mono",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.snippetSuggestions": "top",
+  "editor.suggest.preview": true,
+  "editor.suggest.showMethods": true,
+  "editor.suggestSelection": "first",
+  "editor.tabSize": 2,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "json.schemas": [],
+  "opa.path": "/Users/dteagle/opa",
+  "python.languageServer": "Pylance",
+  "redhat.telemetry.enabled": false,
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.shell": "/bin/zsh",
+  "terminal.integrated.env.osx": {
     "editor.fontSize": 14,
-    "editor.fontLigatures": true,
-    "editor.fontFamily": "Caskaydia Cove Nerd Font Complete, Monaco, monospace",
-    "terminal.integrated.defaultProfile.osx": "zsh",
-    "terminal.integrated.env.osx": {
-        "editor.fontSize": 14,
-        "terminal.integrated.fontFamily": "Caskaydia Cove Nerd Font Complete, monospace"
-    },
-    "workbench.colorCustomizations": {
-      "statusBar.background" : "#393836",
-      "statusBar.noFolderBackground" : "#212121",
-      "statusBar.debuggingBackground": "#263238"
-    },
-    "window.zoomLevel": 1,
-    "json.schemas": [],
-    "yaml.customTags": [
-        "!And",
-        "!And sequence",
-        "!If",
-        "!If sequence",
-        "!Not",
-        "!Not sequence",
-        "!Equals",
-        "!Equals sequence",
-        "!Or",
-        "!Or sequence",
-        "!FindInMap",
-        "!FindInMap sequence",
-        "!Base64",
-        "!Join",
-        "!Join sequence",
-        "!Cidr",
-        "!Ref",
-        "!Sub",
-        "!Sub sequence",
-        "!GetAtt",
-        "!GetAZs",
-        "!ImportValue",
-        "!ImportValue sequence",
-        "!Select",
-        "!Select sequence",
-        "!Split",
-        "!Split sequence"
-    ],
-    "redhat.telemetry.enabled": false
+    "terminal.integrated.fontFamiliy": "Fantasque Sans Mono Regular Nerd Font Complete Mono, monospace",
+    "FIG_NEW_SESSION": "1"
+  },
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "vs-kubernetes": {
+    "vscode-kubernetes.minikube-path.mac": "/Users/dteagle/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
+  },
+  "window.zoomLevel": 1,
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#393836",
+    "statusBar.debuggingBackground": "#263238",
+    "statusBar.noFolderBackground": "#212121"
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "yaml.customTags": [
+    "!And",
+    "!And sequence",
+    "!If",
+    "!If sequence",
+    "!Not",
+    "!Not sequence",
+    "!Equals",
+    "!Equals sequence",
+    "!Or",
+    "!Or sequence",
+    "!FindInMap",
+    "!FindInMap sequence",
+    "!Base64",
+    "!Join",
+    "!Join sequence",
+    "!Cidr",
+    "!Ref",
+    "!Sub",
+    "!Sub sequence",
+    "!GetAtt",
+    "!GetAZs",
+    "!ImportValue",
+    "!ImportValue sequence",
+    "!Select",
+    "!Select sequence",
+    "!Split",
+    "!Split sequence"
+  ],
+  "terminal.integrated.fontFamily": "Caskaydia Cove Nerd Font Complete",
+  "workbench.colorTheme": "Default Dark+ Experimental",
+  "editor.codeActionsOnSave": {},
+  "editor.fontVariations": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "workbench.editor.closeOnFileDelete": true
 }
