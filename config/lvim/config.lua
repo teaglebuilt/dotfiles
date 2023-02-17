@@ -13,13 +13,12 @@ lvim.log.level = "warn"
 lvim.format_on_save = true
 lvim.colorscheme = "onedarker"
 -- to disable icons and use a minimalist setup, uncomment the following
-lvim.use_icons = true
+-- lvim.use_icons = false
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
---require("user.dev_icons")
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
 -- override a default keymapping
@@ -86,8 +85,12 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- generic LSP settings
 
 -- ---@usage disable automatic installation of servers
+<<<<<<< HEAD
 -- lvim.lsp.automatic_servers_installation = false
 
+=======
+lvim.lsp.automatic_servers_installation = true
+>>>>>>> 234a7c57e0ca58a051183251fb87629345d65124
 -- ---configure a server manually. !!Requires `:LvimCacheReset` to take effect!!
 -- ---see the full default list `:lua print(vim.inspect(lvim.lsp.automatic_configuration.skipped_servers))`
 -- vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "pyright" })
@@ -146,10 +149,15 @@ lvim.builtin.treesitter.highlight.enabled = true
 
 -- Additional Plugins
 lvim.plugins = {
+<<<<<<< HEAD
+=======
+  { "kyazdani42/web-devicons" },
+>>>>>>> 234a7c57e0ca58a051183251fb87629345d65124
   {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
   },
+<<<<<<< HEAD
   {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
@@ -167,6 +175,10 @@ require 'nvim-web-devicons'.setup {
   };
   default = true;
 }
+=======
+}
+
+>>>>>>> 234a7c57e0ca58a051183251fb87629345d65124
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- vim.api.nvim_create_autocmd("BufEnter", {
 --   pattern = { "*.json", "*.jsonc" },

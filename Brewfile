@@ -45,6 +45,7 @@ brew "lua"
 brew "luarocks"
 brew "node", link: false
 brew "nvm"
+brew "php@7.3"
 brew "pre-commit"
 brew "postgresql", restart_service: true
 brew "pyenv"
