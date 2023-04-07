@@ -10,8 +10,14 @@ an executable
 
 -- general
 lvim.log.level = "warn"
-lvim.format_on_save = true
-lvim.colorscheme = "onedarker"
+lvim.format_on_save.enabled = false
+lvim.colorscheme = "lunar"
+
+
+vim.opt.wrap = true
+vim.opt.smartcase = false
+vim.opt.smartindent = false
+
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
@@ -19,6 +25,18 @@ lvim.colorscheme = "onedarker"
 lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
+lvim.keys.normal_mode["<C-t>"] = false
+
+lvim.builtin.which_key.mappings["t"] = {
+    name = "+Terminal",
+    h = { "<cmd>ToggleTerm direction=horizontal size=10<cr>", "Toggle Horizontal Terminal" },
+    v = { "<cmd>ToggleTerm direction=vertical size=60<cr>", "Toggle Vertical Terminal" },
+    f = { "<cmd>ToggleTerm direction=float<cr>", "Toggle Float Terminal" },
+    t = { "<cmd>ToggleTerm direction=tab<cr>", "Toggle Tab Terminal" },
+  }
+
+
+-- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
 -- override a default keymapping
@@ -42,6 +60,10 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 --   },
 -- }
 
+-- Change theme settings
+-- lvim.builtin.theme.options.dim_inactive = true
+-- lvim.builtin.theme.options.style = "storm"
+
 -- Use which-key to add extra bindings with the leader-key prefix
 -- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 -- lvim.builtin.which_key.mappings["t"] = {
@@ -51,14 +73,13 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 --   d = { "<cmd>Trouble document_diagnostics<cr>", "Diagnostics" },
 --   q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
 --   l = { "<cmd>Trouble loclist<cr>", "LocationList" },
---   w = { "<cmd>Trouble workspace_diagnostics<cr>", "Wordspace Diagnostics" },
+--   w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
 -- }
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
-lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
@@ -77,20 +98,44 @@ lvim.builtin.treesitter.ensure_installed = {
   "rust",
   "java",
   "yaml",
+  "hcl"
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
-lvim.builtin.treesitter.highlight.enabled = true
+lvim.builtin.treesitter.highlight.enable = true
 
 -- generic LSP settings
+vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { 
+    "angularjs",
+    "graphql",
+    "csharp_ls",
+    "ember",
+    "reason_ls",
+    "rome",
+    "sourcery",
+    "verible",
+    "phpactor",
+    "psalm",
+    "sorbet"
+  }
+)
+-- -- make sure server will always be installed even if the server is in skipped_servers list
+-- lvim.lsp.installer.setup.ensure_installed = {
+--     "sko_lua",
+--     "jsonls",
+-- }
+-- -- change UI setting of `LspInstallInfo`
+-- -- see <https://github.com/williamboman/nvim-lsp-installer#default-configuration>
+-- lvim.lsp.installer.setup.ui.check_outdated_servers_on_open = false
+-- lvim.lsp.installer.setup.ui.border = "rounded"
+-- lvim.lsp.installer.setup.ui.keymaps = {
+--     uninstall_server = "d",
+--     toggle_server_expand = "o",
+-- }
 
 -- ---@usage disable automatic installation of servers
-<<<<<<< HEAD
--- lvim.lsp.automatic_servers_installation = false
+-- lvim.lsp.installer.setup.automatic_installation = false
 
-=======
-lvim.lsp.automatic_servers_installation = true
->>>>>>> 234a7c57e0ca58a051183251fb87629345d65124
 -- ---configure a server manually. !!Requires `:LvimCacheReset` to take effect!!
 -- ---see the full default list `:lua print(vim.inspect(lvim.lsp.automatic_configuration.skipped_servers))`
 -- vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "pyright" })
@@ -98,8 +143,8 @@ lvim.lsp.automatic_servers_installation = true
 -- require("lvim.lsp.manager").setup("pyright", opts)
 
 -- ---remove a server from the skipped list, e.g. eslint, or emmet_ls. !!Requires `:LvimCacheReset` to take effect!!
--- ---`:LvimInfo` lists which server(s) are skiipped for the current filetype
--- vim.tbl_map(function(server)
+-- ---`:LvimInfo` lists which server(s) are skipped for the current filetype
+-- lvim.lsp.automatic_configuration.skipped_servers = vim.tbl_filter(function(server)
 --   return server ~= "emmet_ls"
 -- end, lvim.lsp.automatic_configuration.skipped_servers)
 
@@ -113,72 +158,35 @@ lvim.lsp.automatic_servers_installation = true
 --   buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
 -- end
 
--- -- set a formatter, this will override the language server formatting capabilities (if it exists)
--- local formatters = require "lvim.lsp.null-ls.formatters"
--- formatters.setup {
---   { command = "black", filetypes = { "python" } },
---   { command = "isort", filetypes = { "python" } },
---   {
---     -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
---     command = "prettier",
---     ---@usage arguments to pass to the formatter
---     -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
---     extra_args = { "--print-with", "100" },
---     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
---     filetypes = { "typescript", "typescriptreact" },
---   },
--- }
-
--- -- set additional linters
--- local linters = require "lvim.lsp.null-ls.linters"
--- linters.setup {
---   { command = "flake8", filetypes = { "python" } },
---   {
---     -- each linter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
---     command = "shellcheck",
---     ---@usage arguments to pass to the formatter
---     -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
---     extra_args = { "--severity", "warning" },
---   },
---   {
---     command = "codespell",
---     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
---     filetypes = { "javascript", "python" },
---   },
--- }
-
--- Additional Plugins
 lvim.plugins = {
-<<<<<<< HEAD
-=======
-  { "kyazdani42/web-devicons" },
->>>>>>> 234a7c57e0ca58a051183251fb87629345d65124
-  {
-    "folke/trouble.nvim",
-    cmd = "TroubleToggle",
-  },
-<<<<<<< HEAD
-  {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
+    {
+      "folke/trouble.nvim",
+      cmd = "TroubleToggle",
+    },
+    "williamboman/mason.nvim",
+    "sheerun/vim-polyglot",
+    { "towolf/vim-helm" },
+    { "iamcco/markdown-preview.nvim" },
+    {
+      "rmagatti/goto-preview",
+        config = function()
+        require('goto-preview').setup {
+          width = 120; -- Width of the f loating window
+          height = 25; -- Height of the floating window
+          default_mappings = false; -- Bind default mappings
+          debug = false; -- Print debug information
+          opacity = nil; -- 0-100 opacity level of the floating window where 100 is fully transparent.
+          post_open_hook = nil -- A function taking two arguments, a buffer and a window to be ran as a hook.
+              -- You can use "default_mappings = true" setup option
+              -- Or explicitly set keybindings
+              -- vim.cmd("nnoremap gpd <cmd>lua require('goto-preview').goto_preview_definition()<CR>")
+              -- vim.cmd("nnoremap gpi <cmd>lua require('goto-preview').goto_preview_implementation()<CR>")
+              -- vim.cmd("nnoremap gP <cmd>lua require('goto-preview').close_all_win()<CR>")
+      }
+      end
+    },
 }
 
-require 'nvim-web-devicons'.setup {
-  override = {
-    terraform = {
-      icon = "",
-      color = "#428850",
-      cterm_color = "65",
-      name = "terraform"
-    }
-  };
-  default = true;
-}
-=======
-}
-
->>>>>>> 234a7c57e0ca58a051183251fb87629345d65124
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- vim.api.nvim_create_autocmd("BufEnter", {
 --   pattern = { "*.json", "*.jsonc" },

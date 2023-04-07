@@ -9,26 +9,65 @@ tap 'aws/tap'
 tap "timescale/tap"
 tap "github/gh"
 
-brew "ansifilter"
-brew "ansible"
-brew "asdf"
-brew "awscli"
-brew "awslogs"
-brew "cmake"
+
+### Core
 brew "coreutils"
+brew "gnupg"
+brew "cmake"
+
+### Languages
+brew "gcc"
+brew "go"
+brew "lua"
+brew "luarocks"
+brew "node", link: false
+brew "php@7.3"
+brew "ansible"
+brew "terraform"
+
+### Language Support
+brew "hudochenkov/sshpass/sshpass" # ansible
+brew "pyenv"
+brew "pyenv-virtualenv"
+brew "pyenv-virtualenvwrapper"
+
+### Shell
+brew "zellij"
+brew "zplug"
 brew "direnv"
+brew "asdf"
+brew "starship"
 brew "diff-so-fancy"
 brew "fzf"
-brew "gcc"
+brew "ansifilter"
+brew "tree"
+brew "vim"
+
+### Clients
 brew "git"
-brew "gnupg"
-brew "go"
+brew "httpie"
+brew "multipass"
+brew "mysql-client"
+brew "awscli"
+brew "awslogs"
+brew "sqlite"
+brew "websocat"
+brew "redis"
+
+### Tools
 brew "gradle"
 brew "grunt-cli"
 brew "helm"
 brew "htop"
-brew "httpie"
 brew "jq"
+brew "nmap"
+brew "sops"
+brew "telnet"
+brew "pre-commit"
+brew "watch"
+brew "wget"
+
+### Kubernetes
 brew "kind"
 brew "kubernetes-cli"
 brew "kustomize"
@@ -37,35 +76,10 @@ brew "k3d"
 brew "k9s"
 brew "kubeval"
 brew "minikube"
-brew "multipass"
-brew "mysql-client"
-brew "mysql@5.7", restart_service: true
-brew "nmap"
-brew "lua"
-brew "luarocks"
-brew "node", link: false
-brew "nvm"
-brew "php@7.3"
-brew "pre-commit"
+
+### Services
 brew "postgresql", restart_service: true
-brew "pyenv"
-brew "pyenv-virtualenv"
-brew "pyenv-virtualenvwrapper"
-brew "redis"
-brew "sops"
-brew "hudochenkov/sshpass/sshpass"
-brew "starship"
-brew "sqlite"
-brew "telnet"
-brew "terraform"
-brew "tmux"
-brew "tree"
-brew "vim"
-brew "watch"
-brew "wget"
-brew "websocat"
-brew 'zsh-syntax-highlighting'
-brew "zsh-autosuggestions"
+brew "mysql@5.7", restart_service: true
 
 cask "multipass"
 cask "font-caskaydia-cove-nerd-font"
