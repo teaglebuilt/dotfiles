@@ -1,0 +1,18 @@
+{
+  "extensions": [
+    "4ops.terraform",
+    "dbaeumer.vscode-eslint",
+    "bierner.markdown-mermaid",
+    "catppuccin.catppuccin-vsc",
+    "charliermarsh.ruff",
+    "continue.continue",
+    "drcika.apc-extension",
+    "ms-azuretools.vscode-docker",
+    "rafapaulin.try-material-icon-theme",
+    "prisma.prisma",
+    "donjayamanne.python-extension-pack",
+    "rvest.vs-code-prettier-eslint",
+    "tamasfe.even-better-toml",
+    "temporal-technologies.temporalio"
+  ]
+}
